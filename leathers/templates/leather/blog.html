@@ -1,0 +1,159 @@
+{% extends 'leather/base.html' %}
+{% load static %}
+
+{% block description %}Страница новостей{% endblock %}
+
+{% block title %}
+Новости
+{% endblock %}
+
+{% block content %}
+
+    <!--================Blog Area =================-->
+    <section class="blog_area section_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <div class="blog_left_sidebar">
+                    	{% for news in view.news_all_news %}
+                        <article class="blog_item">
+                        	{% if news.photo %}
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="{{ news.photo.url }}" alt="">
+                                <a href="#" class="blog_item_date">
+                                    <h3>{{ news.time_create|date:"d" }}</h3>
+                                    <p>{{ news.time_create|date:"M" }}</p>
+                                </a>
+                            </div>
+                            {% else %}
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="{% static 'pillow/img/blog/single_blog_1.png' %}" alt="">
+                                <a href="#" class="blog_item_date">
+                                    <h3>{{ news.time_create|date:"d" }}</h3>
+                                    <p>{{ news.time_create|date:"M" }}</p>
+                                </a>
+                            </div>
+                        	{% endif %}
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="{{ news.get_absolute_url }}">
+                                    <h2>{{ news.title }}</h2>
+                                </a>
+                                <p>{% autoescape off %}{{ news.content|truncatewords:15 }}{% endautoescape %}</p>
+                                <ul class="blog-info-link">
+                                    <li><a href="#"><i class="far fa-user"></i> Travel, Lifestyle</a></li>
+                                    <li><a href="#"><i class="far fa-comments"></i>{% for review in news.review.all %} {{ review }} {% endfor %}</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                        {% endfor %}
+
+						{% for pag in paginator.page_range %}
+                        <nav class="blog-pagination justify-content-center d-flex">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Previous">
+                                        <i class="ti-angle-left"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="?page={{ pag }}" class="page-link">{{ pag }}</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Next">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog_right_sidebar">
+                        <aside class="single_sidebar_widget search_widget">
+                            <form action="#">
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder='Поиск'
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Поиск'">
+                                        <div class="input-group-append">
+                                            <button class="btn" type="button"><i class="ti-search"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="button rounded-0 primary-bg text-white w-100 btn_1"
+                                    type="submit">Найти</button>
+                            </form>
+                        </aside>
+
+                      
+
+                        <aside class="single_sidebar_widget popular_post_widget">
+                            <h3 class="widget_title">Последние новости</h3>
+                            {% for news in view.news_all_news %}
+                            {% if news.photo %}
+                            <div class="media post_item">
+                                <img src="{{ news.photo.url }}" alt="photo_news" width="80px" height="80px">
+                                <div class="media-body">
+                                    <a href="{{ news.get_absolute_url }}">
+                                        <h3>{{ news.title|truncatewords:5 }}</h3>
+                                    </a>
+                                    <p>{{ news.time_create|date:"d M Y" }}</p>
+                                </div>
+                            </div>
+                            {% else %}
+                            <div class="media post_item">
+                                <img src="{% static 'pillow/img/blog/single_blog_1.png' %}" alt="photo_news" width="80px" height="80px">
+                                <div class="media-body">
+                                    <a href="{{ news.get_absolute_url }}">
+                                        <h3>{{ news.title|truncatewords:5 }}</h3>
+                                    </a>
+                                    <p>{{ news.time_create|date:"d M Y" }}</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </aside>
+
+
+                        <aside class="single_sidebar_widget instagram_feeds">
+                            <h4 class="widget_title">Галерея</h4>
+                            {% for news in view.news_all_news %}
+                            <ul class="instagram_row flex-wrap">
+                                <li>
+                                	{% if news.photo %}
+                                    <a href="{{ news.get_absolute_url }}">
+                                        <img class="img-fluid" src="{{ news.photo.url }}" alt="">
+                                    </a>
+                                    {% else %}
+                                    <a href="#">
+                                        <img class="img-fluid" src="{% static 'pillow/img/blog/single_blog_1.png' %}" alt="">
+                                    </a>
+                                    {% endif %}
+                                </li>
+                            </ul>
+                            {% endfor %}
+                        </aside>
+
+
+                        <aside class="single_sidebar_widget newsletter_widget">
+                            <h4 class="widget_title">Новостная рассылка</h4>
+
+                            <form action="#">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Введите email'" placeholder='Введите email' required>
+                                </div>
+                                <button class="button rounded-0 primary-bg text-white w-100 btn_1"
+                                    type="submit">Подписаться</button>
+                            </form>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Blog Area =================-->
+
+{% endblock %}

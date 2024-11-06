@@ -1,0 +1,3 @@
+User-agent: *
+Dissalow: /admin/
+Dissalow: /conf/

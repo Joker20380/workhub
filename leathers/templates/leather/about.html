@@ -1,0 +1,99 @@
+{% extends 'leather/base.html' %}
+{% load static %}
+
+{% block description %}Страница о нас{% endblock %}
+
+{% block title %}
+О нас
+{% endblock %}
+
+{% block content %}
+  <!-- breadcrumb part start-->
+    <section class="breadcrumb_part">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb_iner">
+                        <h2>О нас</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb part end-->
+
+    <!-- product list part start-->
+    <section class="about_us padding_top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="about_us_content">
+                        <h5></h5>
+                        <h3></h3>
+                        <div class="about_us_video">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- product list part end-->
+
+
+
+    <!-- client review part here -->
+    <section class="client_review">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                	
+                    
+                    <div class="client_review_slider owl-carousel">
+                    	{% for review in view.review_all_about %}
+                    	
+                    	<div class="single_client_review">
+                    	{% for u in view.userprofile_all_about %}
+    					{% if u.avatar %}
+    					{% if u.user_id == review.bayername_id %}
+                        	<div class="client_img">
+                            	<img src="{{ u.avatar.url }}" alt="{{ review.bayername }}">
+                        	</div>
+                    	{% else %}
+                        {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                            <p>{% autoescape off %}{{ review.body }}{% endautoescape %}</p>
+                            <h5>{{ review.bayername }}</h5>
+                 
+                           
+                        </div>
+                       
+                        {% endfor %}
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- client review part end -->
+
+    <!-- subscribe part here -->
+    <section class="subscribe_part section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="subscribe_part_content">
+                        <h2>Получайте акции и обновления!</h2>
+                        <p>Подписываясь на наши события Вы будете незамедлительно узнавать о новых вакансиях и выгодных предложениях.</p>
+                        <div class="subscribe_form">
+                            <input type="email" placeholder="Введите свой Email">
+                            <a href="#" class="btn_1">Подписаться</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- subscribe part end -->
+{% endblock %}

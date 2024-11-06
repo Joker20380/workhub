@@ -1,0 +1,85 @@
+{% extends "leather/base.html" %}
+{% load i18n %}
+{% load allauth account socialaccount %}
+
+{% block description %}Страница авторизации{% endblock %}
+
+{% block title %}
+Войти
+{% endblock %}
+
+{% block head_title %}
+    {% trans "Sign In" %}
+{% endblock head_title %}
+{% block content %}
+
+
+    <!--================login_part Area =================-->
+    <section class="login_part section_padding ">
+        <div class="container">
+            <div class="row align-items-center">
+				<div class="col-lg-6 col-md-6">
+                    <div class="login_part_form">
+                        <div class="login_part_form_iner">
+                       
+                            <h3>Добро пожаловать! <br>
+                                	Авторизация</h3>
+                         
+                            	
+                    			
+        				<div class="returning_customer">
+            				<form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                            {% element form form=form class="row contact_form" method="post" action=login_url tags="entrance,login" %}  
+								{% slot body %}
+            					{% csrf_token %}
+            				
+            					<div class="col-md-12 form-group p_star">
+                                	<input type="text" class="form-control" id="login" autocomplete="username" name="login" value=""
+                                        placeholder="Имя пользователя" required="">
+                                </div>
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="password" class="form-control" id="password" autocomplete="current-password" name="password"
+                                    	value="" placeholder="Пароль" required="">
+                                </div>
+								{% if redirect_field_value %}
+            						<input type="hidden"
+                    					name="{{ redirect_field_name }}"
+                    					value="{{ redirect_field_value }}">
+								{% endif %}
+								<div class="col-md-12 form-group p_star">
+            						<p>
+        								Забыли пароль? <a href="{% url 'account_reset_password' %}">сброс пароля</a>
+    								</p>
+    							</div>
+								{% endslot %}
+
+        						{% slot actions %}
+        							<div class="col-md-12 form-group p_star">
+                                        <button type="submit" class="btn_3">
+                							{% trans "Sign In" %}
+                						</button>	
+									</div>
+        						{% endslot %}
+                            {% endelement %}
+                            </form>
+                        </div>
+                        {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
+                    </div>
+                </div>
+            </div>
+                    {% url 'account_login' as login_url %}
+				<div class="col-lg-6 col-md-6">
+                    <div class="login_part_text text-center">
+                        <div class="login_part_text_iner">
+                            <h2>Впервые на нашем портале?</h2>
+                            <p>Предлагаем Вам зарегистрироваться для получения всех преимуществ использования портала</p>
+                            <a href="{{ signup_url }}" class="btn_3">Зарегистрироваться</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================login_part end =================-->
+
+{% endblock content %}

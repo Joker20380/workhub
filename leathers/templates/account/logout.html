@@ -1,0 +1,59 @@
+{% extends "leather/base.html" %}
+{% load i18n %}
+{% load allauth account socialaccount %}
+
+{% block description %}Страница выхода{% endblock %}
+
+{% block title %}
+Выход
+{% endblock %}
+
+{% block head_title %}
+    {% trans "Sign Out" %}
+{% endblock head_title %}
+{% block content %}
+
+        <!--================login_part Area =================-->
+    <section class="login_part section_padding ">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="login_part_text text-center">
+                        <div class="login_part_text_iner">
+							    <h2>{% trans 'Are you sure you want to sign out?' %}</h2>
+    							{% url 'account_logout' as action_url %}
+    							{% element form method="post" action=action_url no_visible_fields=True %}
+        						{% slot body %}
+            					{% csrf_token %}
+            					{% element fields form=form unlabeled=True %}
+            										
+            					{% endelement %}
+            					{% if redirect_field_value %}
+            						<input type="hidden"
+                    					name="{{ redirect_field_name }}"
+                    					value="{{ redirect_field_value }}">
+								{% endif %}
+        						{% endslot %}
+        						{% slot actions %}
+        						<div class="col-md-12 form-group p_star">
+                                    <button type="submit" tags="prominent,login" class="btn_3">
+                						{% trans "Sign Out" %}
+                					</button>	
+								</div>
+        						{% endslot %}
+    							{% endelement %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="login_part_form">
+                        <div class="login_part_form_iner">
+                        	
+    					</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================login_part end =================-->
+{% endblock content %}
