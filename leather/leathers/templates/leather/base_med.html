@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Медицинские анализы КДЛ Дзагуров</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="{% static 'pillow/med/img/icons/icon_2.png' %}">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'pillow/med/style.css' %}">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="medilife-load"></div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area">
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100">
+                        <div class="h-100 d-md-flex justify-content-between align-items-center">
+                            <p>Добро пожаловать в <span>КДЛ Дзагуров</span></p>
+                            <p>Часы работы : Понедельник-пятница с 08:00 до 20:00 Телефон : <span>+7(918)000-00-00</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header Area -->
+        <div class="main-header-area" id="stickyHeader">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 h-100">
+                        <div class="main-menu h-100">
+                            <nav class="navbar h-100 navbar-expand-lg">
+                                <!-- Logo Area  -->
+                                <a class="navbar-brand" href="#"><img style="width:70px"src="{% static 'pillow/med/img/icons/icon_2.png' %}" alt="Logo"></a>
+
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medilifeMenu" aria-controls="medilifeMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+                                <div class="collapse navbar-collapse" id="medilifeMenu">
+                                    <!-- Menu Area -->
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="#">Домой <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Страницы</a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="#">Домой</a>
+                                                <a class="dropdown-item" href="#">Документы</a>
+                                                <a class="dropdown-item" href="#">Услуги</a>
+                                                <a class="dropdown-item" href="#">Блог</a>
+                                                <a class="dropdown-item" href="#">Новость </a>
+                                                <a class="dropdown-item" href="#">Контакты</a>
+                                                <a class="dropdown-item" href="#">Элементы</a>
+                                                <a class="dropdown-item" href="#">Иконки</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Документы</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Услуги</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Новости</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Контакты</a>
+                                        </li>
+                                    </ul>
+                                    <!-- Appointment Button -->
+                                    <a href="#" class="btn medilife-appoint-btn ml-30">Для <span>экстренных случаев</span></a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+{% block content %}
+
+{% endblock %}
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-100">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="footer-logo">
+                                <img style="width:70px"src="{% static 'pillow/med/img/icons/icon_2.png' %}" alt="Logo">
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer.</p>
+                            <div class="footer-social-info">
+                                <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>Последние новости</h6>
+                            </div>
+                            <div class="widget-blog-post">
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="{% static 'pillow/med/img/blog-img/ln1.jpg' %}" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="#">Новость первая о чем то</a>
+                                        <p>Dec 02, 2025</p>
+                                    </div>
+                                </div>
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="{% static 'pillow/med/img/blog-img/ln2.jpg' %}" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="#">Вторая новость о другом</a>
+                                        <p>Dec 02, 2025</p>
+                                    </div>
+                                </div>
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="{% static 'pillow/med/img/blog-img/ln3.jpg' %}" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="#">Третья новость о третьем</a>
+                                        <p>Dec 02, 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>Контактная форма</h6>
+                            </div>
+                            <div class="footer-contact-form">
+                                <form action="#" method="post">
+                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="footer-name" id="footer-name" placeholder="Имя">
+                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0" name="footer-email" id="footer-email" placeholder="Email">
+                                    <textarea name="message" class="form-control border-top-0 border-right-0 border-left-0" id="footerMessage" placeholder="Сообщение"></textarea>
+                                    <button type="submit" class="btn medilife-btn">Связаться с нами<span>+</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>Новостная рассылка</h6>
+                            </div>
+
+                            <div class="footer-newsletter-area">
+                                <form action="#">
+                                    <input type="email" class="form-control border-0 mb-0" name="newsletterEmail" id="newsletterEmail" placeholder="Ваш Email">
+                                    <button type="submit">Подписаться</button>
+                                </form>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Footer Area -->
+        <div class="bottom-footer-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="bottom-footer-content">
+                            <!-- Copywrite Text -->
+                            <div class="copywrite-text">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#" target="_blank">WhiteCat</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="{% static 'pillow/med/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'pillow/med/js/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'pillow/med/js/bootstrap.min.js' %}"></script>
+    <!-- Plugins js -->
+    <script src="{% static 'pillow/med/js/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'pillow/med/js/active.js' %}"></script>
+
+</body>
+
+</html>

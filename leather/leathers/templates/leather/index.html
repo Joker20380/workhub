@@ -1,0 +1,213 @@
+{% extends 'leather/base.html' %}
+{% load static %}
+
+{% block description %}Главная страница{% endblock %}
+
+{% block title %}
+Домой
+{% endblock %}
+
+{% block content %}
+
+
+
+    <!-- product list start-->
+    <section class="single_product_list">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                	{% for products in view.products_all_index %}
+    				{% if products.id == 1 %}
+                    <div class="single_product_iner">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="single_product_img">
+                                    {% if products.photo %}
+            						<img src="{{ products.photo.url }}" alt="{{ products.title }}" class="img-fluid">
+            						{% else %}
+            						<img src="{% static 'pillow/img/product/no-image.PNG' %}" alt="no photo" class="img-fluid">
+            						{% endif %}
+                                    <img src="{% static 'pillow/img/product_overlay.png' %}" alt="#" class="product_overlay img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-sm-6">
+                                <div class="single_product_content">
+                                    <h5>{{ products.price }}</h5>
+                                    <h2> <a href="{{ products.get_absolute_url }}">{{ products.title }}</a> </h2>
+                                    {% if user.is_authenticated %}
+                                    <form action="{% url 'add_user_to_product' products.id %}" method="post">
+                                    	{% csrf_token %}
+                                    	<button type="submit" class="btn_3">принять заказ</button>
+                                    </form>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+    				{% endfor %}
+    				{% for products in view.products_all_index %}
+    				{% if products.id == 2 %}
+                    <div class="single_product_iner">
+                        <div class="row align-items-center justify-content-between">
+                        	<div class="col-lg-6 col-sm-6">
+                                <div class="single_product_img">
+                                    {% if products.photo %}
+            						<img src="{{ products.photo.url }}" alt="{{ products.title }}" class="img-fluid">
+            						{% else %}
+            						<img src="{% static 'pillow/img/product/no-image.PNG' %}" alt="no photo" class="img-fluid">
+            						{% endif %}
+                                    <img src="{% static 'pillow/img/product_overlay.png' %}" alt="#" class="product_overlay img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-sm-6">
+                                <div class="single_product_content"
+                                    <h5>${{ products.price }}</h5>
+                                    <h2> <a href="{{ products.get_absolute_url }}">{{ products.title }}</a> </h2>
+                                    {% if user.is_authenticated %}
+                                    <form action="{% url 'add_user_to_product' products.id %}" method="post">
+                                    	{% csrf_token %}
+                                    	<button type="submit" class="btn_3">принять заказ</button>
+                                    </form>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+    				{% endfor %}
+    				{% for products in view.products_all_index %}
+    				{% if products.id == 4 %}
+                    <div class="single_product_iner">
+                        <div class="row align-items-center justify-content-between">
+                        	<div class="col-lg-6 col-sm-6">
+                                <div class="single_product_img">
+                                    {% if products.photo %}
+            						<img src="{{ products.photo.url }}" alt="{{ products.title }}" class="img-fluid">
+            						{% else %}
+            						<img src="{% static 'pillow/img/product/no-image.PNG' %}" alt="no photo" class="img-fluid">
+            						{% endif %}
+                                    <img src="{% static 'pillow/img/product_overlay.png' %}" alt="#" class="product_overlay img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-sm-6">
+                                <div class="single_product_content"
+                                    <h5>${{ products.price }}</h5>
+                                    <h2> <a href="{{ products.get_absolute_url }}">{{ products.title }}</a> </h2>
+                                    {% if user.is_authenticated %}
+                                    <form action="{% url 'add_user_to_product' products.id %}" method="post">
+                                    	{% csrf_token %}
+                                    	<button type="submit" class="btn_3">принять заказ</button>
+                                    </form>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+    				{% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- product list end-->
+
+
+    <!-- trending item start-->
+    <section class="trending_items">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_tittle text-center">
+                        <h2></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            	{% for product in view.products_all_index %}
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_product_item">
+                    	{% if product.photo %}
+                        <div class="single_product_item_thumb">
+                            <img src="{{ product.photo.url }}" alt="{{ product.title }}" class="img-fluid">
+                        </div>
+                        {% else %}
+                        <div class="single_product_item_thumb">
+                            <img src="{% static 'pillow/img/product/no-image.PNG' %}" alt="no-photo" class="img-fluid">
+                        </div>
+                        {% endif %}
+                        <h3> <a href="single-product.html">{{ product.title }}</a> </h3>
+                        <p>${{ product.price }}</p>
+                    </div>
+                </div>
+    			{% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- trending item end-->
+
+    <!-- client review part here -->
+    <section class="client_review">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                	
+                    
+                    <div class="client_review_slider owl-carousel">
+                    	{% for review in view.review_all_index %}
+                    	
+                    	<div class="single_client_review">
+                    	{% for u in view.userprofile_all_index %}
+    					{% if u.avatar %}
+    					{% if u.user_id == review.bayername_id %}
+                        	<div class="client_img">
+                            	<img src="{{ u.avatar.url }}" alt="{{ review.bayername }}">
+                        	</div>
+                    	{% else %}
+                        {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                            <p>{% autoescape off %}{{ review.body }}{% endautoescape %}</p>
+                            <h5>{{ review.bayername }}</h5>
+                 
+                           
+                        </div>
+                       
+                        {% endfor %}
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- client review part end -->
+
+
+    <!-- subscribe part here -->
+    <section class="subscribe_part section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="subscribe_part_content">
+                        <h2>Получайте акции и обновления!</h2>
+                        <p>Подписываясь на наши события Вы будете незамедлительно узнавать о новых вакансиях и выгодных предложениях.</p>
+                        <div class="subscribe_form">
+                            <input type="email" placeholder="Введите свой Email">
+                            <a href="#" class="btn_1">Подписаться</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="subscribe_part_content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- subscribe part end -->
+
+{% endblock %}

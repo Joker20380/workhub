@@ -1,0 +1,88 @@
+{% extends 'leather/base.html' %}
+{% load static %}
+
+{% block description %}Страница политики конфиденциальности{% endblock %}
+
+{% block title %}
+Политика конфиденциальности
+{% endblock %}
+
+{% block content %}
+{% for news in view.news_all_conf %}
+    <!-- breadcrumb part start-->
+    <section class="breadcrumb_part">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb_iner">
+                        <h2>{{ news.title }}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb part end-->
+   <!--================Blog Area =================-->
+	<section class="blog_area single-post-area section_padding">
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-lg-8 posts-list">
+            		<div class="single-post">
+               		{% if news.photo %}
+                	<div class="feature-img">
+                    	<img class="img-fluid" src="{{ news.photo.url }}" alt="{{ news.title }}">
+                	</div>
+                	{% else %}
+                	<div class="feature-img">
+                    	<img class="img-fluid" src="{% static 'pillow/img/no-image.PNG' %}" alt="">
+                	</div>
+                	{% endif %}
+                	<div class="blog_details">
+                    	<h2>{{ news.title }}
+                    	</h2>
+                    	<p class="excert">
+                        	{% autoescape off %}{{ news.content }}{% endautoescape %}
+                    	</p>
+                	</div>
+               </div>
+               {% endfor %}
+                
+            	</div>
+            	<div class="col-lg-4">
+                    <div class="blog_right_sidebar">
+                        <aside class="single_sidebar_widget search_widget">
+                            <form action="#">
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder='Поиск'
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Поиск'">
+                                        <div class="input-group-append">
+                                            <button class="btn" type="button"><i class="ti-search"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="button rounded-0 primary-bg text-white w-100 btn_1"
+                                    type="submit">Найти</button>
+                            </form>
+                        </aside>
+
+                        <aside class="single_sidebar_widget newsletter_widget">
+                            <h4 class="widget_title">Новостная рассылка</h4>
+
+                            <form action="#">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Введите email'" placeholder='Введите email' required>
+                                </div>
+                                <button class="button rounded-0 primary-bg text-white w-100 btn_1"
+                                    type="submit">Подписаться</button>
+                            </form>
+                        </aside>
+                    </div>
+                </div>
+        	</div>
+    	</div>
+    </section>
+   <!--================Blog Area end =================-->
+{% endblock %}
