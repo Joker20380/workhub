@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="558"
+   height="750"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="svg (5).svg"
+   inkscape:version="1.4 (1:1.4+202410161351+e7c3feb100)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0813333"
+     inkscape:cx="279.28483"
+     inkscape:cy="375"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <g
+     id="g1">
+    <title
+       id="title1">Layer 1</title>
+    <g
+       id="svg_46">
+      <g
+         id="svg_44">
+        <ellipse
+           transform="rotate(-33.3915 152.163 580.593)"
+           stroke="#e00000"
+           ry="177.58855"
+           rx="0.96345"
+           id="svg_21"
+           cy="580.59275"
+           cx="152.1629"
+           stroke-width="10"
+           fill="#e00000" />
+        <ellipse
+           transform="rotate(33.0321 413.459 568.74)"
+           stroke="#e00000"
+           ry="194.0576"
+           rx="2.60921"
+           id="svg_23"
+           cy="568.73963"
+           cx="413.45867"
+           stroke-width="10"
+           fill="#e00000" />
+        <ellipse
+           stroke="#e00000"
+           stroke-width="10"
+           ry="272.52525"
+           rx="271.94447"
+           id="svg_5"
+           cy="278.2628"
+           cx="279.14927"
+           fill="#e00000" />
+        <ellipse
+           stroke="#e00000"
+           ry="37.37476"
+           rx="40.76727"
+           id="svg_9"
+           cy="710.48069"
+           cx="279.97266"
+           fill="#e00000" />
+        <path
+           id="svg_25"
+           d="m88.9516,480.26198l158.11236,241.5892l75.96898,-12.4031l150.38757,-231.78291l-384.46892,2.59681l0.00001,0z"
+           opacity="NaN"
+           stroke-width="10"
+           stroke="#e00000"
+           fill="#e00000" />
+      </g>
+      <ellipse
+         stroke="#b2b2b2"
+         ry="157.04122"
+         rx="157.04121"
+         id="svg_33"
+         cy="279.92518"
+         cx="278.85433"
+         stroke-width="6"
+         fill="#b2b2b2" />
+      <g
+         id="svg_45">
+        <g
+           id="svg_35">
+          <rect
+             transform="rotate(89.6641 279.359 279.396)"
+             stroke="#000000"
+             stroke-width="4"
+             id="svg_4"
+             height="445"
+             width="70"
+             y="56.8961"
+             x="244.35839"
+             fill="#5c5d63" />
+          <rect
+             transform="rotate(134.664 279.359 278.692)"
+             stroke="#000000"
+             stroke-width="4"
+             id="svg_18"
+             height="445"
+             width="70"
+             y="56.19214"
+             x="244.35886"
+             fill="#5c5d63" />
+          <rect
+             transform="rotate(179.664 279.359 280.1)"
+             stroke="#000000"
+             stroke-width="4"
+             id="svg_22"
+             height="445"
+             width="70"
+             y="57.6008"
+             x="244.35852"
+             fill="#5c5d63" />
+          <rect
+             transform="rotate(224.664 279.358 279.396)"
+             stroke="#000000"
+             stroke-width="4"
+             id="svg_28"
+             height="445"
+             width="70"
+             y="56.89649"
+             x="244.35813"
+             fill="#5c5d63" />
+          <ellipse
+             stroke="#000000"
+             ry="184.5"
+             rx="183.49999"
+             id="svg_8"
+             cy="279.3961"
+             cx="279.85839"
+             stroke-width="4"
+             fill="#5c5d63" />
+          <rect
+             transform="rotate(89.6641 279.641 279.452)"
+             stroke="#5c5d63"
+             stroke-width="6"
+             id="svg_14"
+             height="399.2182"
+             width="60"
+             y="79.8427"
+             x="249.64038"
+             fill="#b2b2b2" />
+          <rect
+             transform="rotate(134.664 280.223 279.635)"
+             stroke="#5c5d63"
+             stroke-width="6"
+             id="svg_19"
+             height="399.2182"
+             width="60"
+             y="80.02617"
+             x="250.22241"
+             fill="#b2b2b2" />
+          <rect
+             transform="rotate(179.664 279.303 279.678)"
+             stroke="#5c5d63"
+             stroke-width="6"
+             id="svg_24"
+             height="399.2182"
+             width="60"
+             y="80.06919"
+             x="249.30195"
+             fill="#b2b2b2" />
+          <rect
+             transform="rotate(224.664 279.119 279.556)"
+             stroke="#5c5d63"
+             stroke-width="6"
+             id="svg_30"
+             height="399.2182"
+             width="60"
+             y="79.94671"
+             x="249.11863"
+             fill="#b2b2b2" />
+        </g>
+        <ellipse
+           stroke="#000000"
+           ry="139.4357"
+           rx="140.49201"
+           id="svg_36"
+           cy="279.92519"
+           cx="279.91066"
+           stroke-width="6"
+           fill="#ffffff" />
+        <rect
+           stroke="#000000"
+           id="svg_38"
+           height="139.4357"
+           width="60.56298"
+           y="274.29142"
+           x="248.57286"
+           stroke-width="6"
+           fill="#000000" />
+        <ellipse
+           stroke="#000000"
+           ry="69.01363"
+           rx="69.71784"
+           id="svg_39"
+           cy="280.62941"
+           cx="278.85435"
+           stroke-width="6"
+           fill="#000000" />
+        <rect
+           id="svg_40"
+           height="61.97142"
+           width="42.25324"
+           y="208.09467"
+           x="257.72772"
+           stroke-width="6"
+           stroke="#ffffff"
+           fill="#ffffff" />
+      </g>
+    </g>
+  </g>
+  <path
+     style="fill:#e00000;stroke:#000000;stroke-width:1.34926"
+     d="M 226.55965,682.15027 C 211.54011,659.10086 149.14869,564.1798 122.6222,524.02188 c -10.53551,-15.9495 -18.97918,-29.17538 -18.76372,-29.39084 0.21547,-0.21547 4.71366,2.86142 9.99598,6.83752 97.19016,73.15683 233.35242,72.87307 331.66034,-0.69118 2.16168,-1.6176 3.93033,-2.71819 3.93033,-2.44576 0,0.27243 -8.8004,13.93744 -19.55643,30.36669 -27.03509,41.29458 -73.04761,112.65292 -92.30926,143.15742 -8.83212,13.98736 -16.37247,25.7932 -16.75633,26.23519 -0.38385,0.44199 -1.61932,-1.01455 -2.74547,-3.23675 -6.27413,-12.38046 -16.99814,-19.75933 -32.12895,-22.10695 -17.82289,-2.76532 -36.39734,6.65436 -43.96283,22.29492 l -2.99324,6.1881 z"
+     id="path1" />
+</svg>
